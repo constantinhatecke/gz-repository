@@ -18,8 +18,8 @@ SELECT
   ,s.revenue AS turnover
   -- cost --
   ,CAST(p.purchSE_PRICE AS FLOAT64) AS purchase_price
-	,ROUND(s.quantity*CAST(p.purchSE_PRICE AS FLOAT64),2) AS purchase_cost
+	,ROUND(s.quantity*CAST(p.purchSE_PRICE AS FLOAT64),5) AS purchase_cost
 	-- margin --
-	,s.revenue - s.quantity*CAST(p.purchSE_PRICE AS FLOAT64) AS margin
+	,s.revenue - s.quantity*CAST(p.purchSE_PRICE AS FLOAT64) AS product_margin
 FROM sales s
 INNER JOIN product p ON s.pdt_id = p.products_id
