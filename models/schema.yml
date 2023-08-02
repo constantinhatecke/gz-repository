@@ -1,0 +1,35 @@
+version: 2
+
+models:
+
+    - name: sales
+      tests:
+        - unique:
+            column_name: "(orders_id || '-' || products_id)"
+            
+      columns:
+          - name: orders_id
+            description : shows which order the product was part of 
+            tests : 
+            - not_null 
+
+          - name: products_id
+            description : iis the unique id which identifies the product
+            tests : 
+            - not_null 
+
+          - name: qty
+
+          - name: turnover
+            description : this is the revenue taken in from the sale of the product
+            tests : 
+            - not_null 
+
+          - name: purchase_cost
+            description : this is the cost that the company incurred aquiering the product
+            tests : 
+            - not_null 
+
+          - name: margin
+            description : this show the product margin which is turnover- purchase cost
+        
