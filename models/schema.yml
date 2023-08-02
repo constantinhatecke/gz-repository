@@ -31,5 +31,5 @@ models:
             - not_null 
 
           - name: margin
-            description : this show the product margin which is turnover- purchase cost
+            description : this show the product margin which is turnover- purchase cost (turnover-purchase_costs)
         
