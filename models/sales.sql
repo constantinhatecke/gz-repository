@@ -23,7 +23,6 @@ SELECT
 	,ROUND(s.quantity*CAST(p.purchSE_PRICE AS FLOAT64),5) AS purchase_cost
 	-- margin --
 <<<<<<< HEAD
-	,s.revenue - s.quantity*CAST(p.purchSE_PRICE AS FLOAT64) AS product_margin
 =======
 	,ROUND(s.revenue-s.quantity*CAST(p.purchSE_PRICE AS FLOAT64),2) AS margin
 >>>>>>> b74b870ff4ec6062387b86568e2fd576270e16ee
